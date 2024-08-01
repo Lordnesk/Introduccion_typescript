@@ -1,0 +1,274 @@
+1. Introducción a TypeScript
+
+- Introducción:
+  TypeScript es un lenguaje de programación desarrollado por Microsoft que extiende JavaScript añadiendo tipos estáticos. Su uso mejora la robustez y mantenibilidad del código. Es un lenguaje transpilado, lo que significa que se compila a JavaScript para ser ejecutado en cualquier navegador o entorno.
+
+  Chicos, desde ya les digo, piensen en Typescript no como tu enemigo, sino como tu mejor amigo. Es un lenguaje que te ayudará a evitar errores comunes en JavaScript, a mejorar la calidad de tu código y a facilitar el mantenimiento de tus proyectos. Además, TypeScript es compatible con la mayoría de las librerías y frameworks de JavaScript, por lo que puedes integrarlo fácilmente en tus proyectos existentes.
+
+  TypeScript es un lenguaje de programación desarrollado por Microsoft que extiende JavaScript añadiendo tipos estáticos. Su uso mejora la robustez y mantenibilidad del código. Es un lenguaje transpilado, lo que significa que se compila a JavaScript para ser ejecutado en cualquier navegador o entorno.
+
+  Chicos, desde ya les digo, piensen en Typescript no como tu enemigo, sino como tu mejor amigo. Es un lenguaje que te ayudará a evitar errores comunes en JavaScript, a mejorar la calidad de tu código y a facilitar el mantenimiento de tus proyectos. Además, TypeScript es compatible con la mayoría de las librerías y frameworks de JavaScript, por lo que puedes integrarlo fácilmente en tus proyectos existentes.
+
+- Casos de uso:
+
+  ¿Qué es el tipado estático y por qué es importante en TypeScript?
+
+  El tipado estático es la capacidad de definir tipos de datos para variables, parámetros de funciones y valores de retorno. En proyectos a gran escala, el tipado estático de TypeScript beneficia a los equipos de desarrollo de la siguiente manera:
+
+  - **Prevención de errores**: Los tipos estáticos ayudan a detectar errores en tiempo de compilación.
+  - **Mejor documentación**: Los tipos claros y explícitos sirven como documentación del código.
+  - **Mejor rendimiento**: TypeScript puede optimizar el código basado en los tipos definidos.
+  - **Mejor mantenibilidad**: Los tipos estáticos facilitan la refactorización y el mantenimiento del código.
+  - **Mejor autocompletado**: Los editores de código pueden proporcionar sugerencias y autocompletado basados en los tipos.
+  - **Mejor legibilidad**: Los tipos explícitos hacen que el código sea más fácil de entender para otros desarrolladores.
+  - **Mejor escalabilidad**: Los tipos estáticos permiten escalar el código de manera más eficiente.
+  - **Mejor integración**: TypeScript se integra fácilmente con herramientas de desarrollo y librerías populares.
+
+- Ahora practica tú con este ejercicio:
+
+  - Inicializa un nuevo proyecto de TypeScript con los comandos mencionados anteriormente. Deberias tener una estructura de archivos similar a la siguiente:
+
+    ├── node_modules
+    ├── index.ts
+    ├── package-lock.json
+    ├── package.json
+    └── tsconfig.json
+
+Ejercicios 
+
+  - Ahora practica tú con estos ejercicios:
+      Crea un tipo personalizado para un objeto Producto con propiedades id, nombre, y precio.
+
+      R// const id : number = 1;
+          const nombre: string = "Manzana";
+          const precio: number = 3000
+
+          type Producto = {
+              id: number;
+              nombre: string;
+              precio: number;
+          };
+    
+  - Ahora practica tú con este ejercicio:
+      Implementa una función que determine si un número es par utilizando operadores aritméticos y booleanos.
+
+      R// function esPar(sum: number){
+          return sum % 2 == 0;
+          }
+          console.log(esPar(4));
+
+  - Ahora practica tú con este ejercicio:
+      Implementa una función que clasifique un número en positivo, negativo o cero usando if y switch.
+
+      R// var numero = 5 ;
+          if (numero > 0) {
+              console.log("".concat(numero, " es mayor que 0 por ende es posittivo"));
+          }
+
+          ;
+          switch (numero) {
+              case 0:
+                  console.log("".concat(numero, " es 0"));
+                  break;
+              case -5:
+                  console.log("".concat(numero, " es negativo"));
+              default:
+                  break;
+          }
+  - Ahora practica tú con este ejercicio:
+      Implementa una función que recorra un array de nombres y los imprima en consola.
+
+      R// let names: string[] = ["Andres", "David", "Harlod", "Samuel"];
+
+          for (let name = 0; name < names.length; name++) {
+              console.log(names[name])
+          };
+
+          names.forEach(name => console.log(name));
+
+  - Ejercicio Práctico
+      Tarea 1: Crea un array de números y calcula la suma de todos sus elementos utilizando un metodo reduce.
+
+      R// let numbers: number[] = [1,2,3,4,5];
+          const sum: number = numbers.reduce((accumulator, currentValue) => {
+              return accumulator + currentValue;
+              }, 0);
+          console.log(sum);
+
+
+      Tarea 2: Implementa una función que reciba un array de strings y retorne la concatenación de todos los elementos.
+
+      R// function array(x:string) {
+              return x.split("");
+          }
+
+          console.log(array("Andres"));
+
+
+      Tarea 3: Define un array de objetos User con propiedades id y name, e imprime el nombre de cada usuario en consola.
+
+      R// interface User {
+          id: number;
+          name: string;
+      };
+
+
+      const users: User[] = [
+      { id: 1, name: 'Alice' },
+      { id: 2, name: 'Bob' },
+      { id: 3, name: 'Charlie' }
+      ];
+
+
+      users.forEach((user: User) => {
+      console.log(user.name);
+      });
+
+      Tarea 4: Implementa una función que reciba un array de números y retorne el mayor valor.
+
+      R// function findMaxValue(numbers: number[]): number | undefined {
+          if (numbers.length === 0) {
+            return undefined;
+          }
+          return Math.max(...numbers);
+        }
+        
+        const numbers: number[] = [10, 5, 8, 23, 15];
+        const maxValue: number | undefined = findMaxValue(numbers);
+
+        console.log(`El mayor valor en el array es: ${maxValue}`);
+
+
+      Tarea 5: Define un objeto Car con propiedades marca, modelo y año. Crea una instancia de Car e imprime sus propiedades en consola.
+
+      R// type Car = {
+            marca: string;
+            modelo: string;
+            año: number;
+        }
+
+        const cars : Car[] = [
+            {marca: "Toyota Corolla", modelo:"SE", año: 2024},
+            {marca: "Honda Civic", modelo: "EX", año: 2023},
+            {marca: "Ford Mustang", modelo: "GT", año: 2024}
+        ]
+
+        cars.forEach((car: Car) => {
+            console.log(car);
+            
+        })
+
+      Tarea 6: Con base en el objeto Car, crea una clase que posea un metodo estatico que reciba un objeto Car y retorne un string con la información del carro.
+       
+        class CarInfo {
+          static obtenerInformacion(car: Car): string {
+              return `Marca: ${car.marca}, Modelo: ${car.modelo}, Año: ${car.año}`;
+          }
+        }
+      Tarea 7: Implementa una función que reciba un objeto Car y retorne un nuevo objeto con las mismas propiedades, pero con el año incrementado en 1.
+        
+        function incrementarAño(car: Car): Car {
+            return {
+                ...car, // Copia las propiedades existentes del objeto original
+                año: car.año + 1 // Incrementa el año en 1
+            };
+        }
+      Tarea 8: Implementa una función que reciba un array de números y retorne el mayor valor.
+
+      R// function encontrarMaximo(arr:number[]):number {
+                return Math.max(...arr);
+            }
+
+            const numeros: number[] = [5,7,9,4,3,8];
+            const maximo: number = encontrarMaximo(numeros);
+
+            console.log(maximo);
+
+
+      Tarea 9: Implementa una funcion que reciba rest parameters y retorne error si almenos uno de los parametros pasados no es del tipo de los dos primeros parametros. Asegurarse que los dos primeros parametros sean del mismo tipo.
+    
+      R//
+      function vereficar(a:any, b:any, ...c: any) {
+        if (typeof a !== typeof b){
+            return "Los dos primeros parametros no son del mismo tipo"
+        }
+
+        for (const param of c) {
+            if(typeof param !== a){
+                return "Almenos uno de los parametros restantes no comparte tipo"
+            }
+        }
+
+        return "Todos los datos tienen el mismo tipo"
+    };
+
+        const resultado1 = vereficar(1, 2, 3, 4, 5); 
+        console.log(resultado1); 
+
+        const resultado2 = vereficar('a', 'b', 'c', 'd', 5); 
+        console.log(resultado2); 
+
+        const resultado3 = vereficar(1, '2', 3); 
+        console.log(resultado3);
+      
+
+      Tarea 10: Define una funcion que reciba una matriz cuadrada de numeros como parametros y devuelva la matriz gira 90 grados en sentido horario. (2 Riwi points)
+
+
+
+
+
+
+
+
+Preguntas de reflexión:
+  - ¿Cómo influye una buena configuración inicial en el desarrollo de un proyecto?
+
+  R// Influye en que sera mas sencillo a la hora de organizar las carpetas del proyecto ademas de que al tener todas las herramientas y dependencias instaladas desde un principio, solo se puede concentrar en hacer codigo
+
+  - ¿Qué ventajas ofrece TypeScript en comparación con JavaScript puro?
+
+  R// En resumen, TypeScript proporciona herramientas y características que pueden mejorar la productividad y la calidad del código, especialmente en proyectos más grandes o complejos. Sin embargo, la elección entre TypeScript y JavaScript puro dependerá del contexto del proyecto, la preferencia del equipo y los requisitos específicos.
+
+  - ¿Por qué es importante verificar los tipos de datos en un proyecto de software?
+
+  R// La verificación de tipos de datos ayuda a garantizar que el software funcione como se espera, reduce errores y problemas en producción, mejora la comunicación dentro del equipo de desarrollo, y facilita la mantenibilidad y escalabilidad del código. Aunque puede añadir cierta complejidad, los beneficios en términos de estabilidad y calidad suelen justificar su uso en proyectos de software.
+
+  - ¿Cómo ayuda el tipado estático a prevenir errores en el manejo de variables y constantes?
+
+  R// El tipado estático previene errores en el manejo de variables y constantes al garantizar que los tipos sean consistentes y correctos en todo el código. Esto mejora la seguridad, la claridad y la robustez del software, reduciendo la probabilidad de errores que podrían ser difíciles de detectar en tiempo de ejecución. Además, facilita la comprensión y el mantenimiento del código, especialmente en proyectos grandes o complejos.
+
+  - ¿Qué ventajas ofrece el uso de operadores en un lenguaje tipado como TypeScript?
+
+  R// El uso de operadores en TypeScript proporciona una serie de beneficios que van más allá de las operaciones básicas de datos. Al aprovechar el sistema de tipos, TypeScript ayuda a prevenir errores, mejorar la claridad y la mantenibilidad del código, y aprovechar las características modernas del lenguaje de manera más segura y eficiente.
+
+  - ¿Cuándo es preferible usar un operador ternario en lugar de una estructura if?
+
+  R// Usa el operador ternario cuando estés manejando una simple asignación de valor o renderización basada en una sola condición y la lógica es directa y no compleja.
+  Usa la estructura if cuando tengas múltiples condiciones, acciones complejas, o cuando necesites ejecutar varias instrucciones dentro de una condición.
+
+  - ¿Qué ventajas tiene el método map sobre un bucle for en TypeScript?
+
+  R// El método map proporciona una forma más elegante, segura y eficiente de transformar elementos en una matriz en comparación con el bucle for, especialmente cuando se trabaja con arrays en TypeScript o JavaScript.
+
+  - ¿Cómo se puede asegurar el tipo de datos en un array en TypeScript?
+
+  R// En TypeScript, asegurar el tipo de datos en un array se puede lograr de manera efectiva usando las siguientes técnicas:
+
+      Declarar el tipo directamente en la declaración del array.
+      Usar interfaces para arrays de objetos.
+      Emplear tipos genéricos para funciones que trabajan con arrays.
+      Definir tuplas para arrays con una longitud fija y tipos específicos.
+      Verificar tipos en tiempo de ejecución si es necesario.
+      Estas técnicas permiten que el código sea más seguro y fácil de mantener, aprovechando al máximo las capacidades de TypeScript para el manejo de tipos.
+
+
+   - ¿Qué ventajas ofrece el uso de tipos personalizados en objetos?
+
+   R// los tipos personalizados son una herramienta poderosa para mejorar la calidad, claridad y mantenimiento del código al proporcionar una forma de organizar y gestionar datos y comportamientos de manera más eficiente.
+
+
+    - ¿Qué beneficios ofrece la definición explícita de tipos en las funciones en TypeScript?
+
+   R// En resumen, definir explícitamente los tipos en TypeScript ayuda a mejorar la robustez, la legibilidad y la mantenibilidad del código, además de facilitar el desarrollo y la colaboración en proyectos de software.
+
